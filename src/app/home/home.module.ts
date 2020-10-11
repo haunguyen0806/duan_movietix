@@ -8,6 +8,7 @@ import { HomeLayoutModule } from './home-layout/home-layout.module';
 import { RouterModule, Routes } from '@angular/router'
 import { HomeLayoutComponent } from './home-layout/home-layout.component';
 import { DetailMovieComponent } from './detail-movie/detail-movie.component';
+import {ShowingFilmDetailsRoutingModule} from '../home/detail-movie/detail-movie-routing.modules'
 
 const routes: Routes = [
   {
@@ -17,9 +18,6 @@ const routes: Routes = [
       {
         path: '', component:HomeLayoutComponent, data: { title: 'Home' }
       },
-      {
-        path: 'detail', component: DetailMovieComponent, data: {title: 'Movie-detail'}
-      }
     ]
   }
 ]
@@ -31,7 +29,7 @@ const routes: Routes = [
     HomeLayoutModule,
     RouterModule.forChild(routes),
     RouterModule,
-    
+    ShowingFilmDetailsRoutingModule
   ],
   exports: [
     HeaderComponent, FooterComponent, HomeComponent,DetailMovieComponent

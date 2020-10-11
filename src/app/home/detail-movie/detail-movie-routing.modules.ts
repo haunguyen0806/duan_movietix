@@ -1,9 +1,15 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+import { HomeComponent } from '../home.component';
 import { DetailMovieComponent } from './detail-movie.component';
 
 const routes: Routes = [
-    { path: "", component: DetailMovieComponent }
+    { path: "detail", component: DetailMovieComponent,children:[
+        {
+            path: 'detail', component: DetailMovieComponent, data: {title: 'Movie-detail'}
+          }
+    ] },
+    
 ];
 
 @NgModule({
