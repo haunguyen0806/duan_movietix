@@ -5,6 +5,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { RouterModule, Routes } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import {SignUpGuard} from '../core/guards/sign-up.guard'
 
 const routes: Routes = [
   {
@@ -13,7 +14,7 @@ const routes: Routes = [
     children: [
       {path: 'signin', component: SignInComponent},
       {path: 'signup', component: SignUpComponent, 
-      // canDeactivate: [SignupGuard]
+      canDeactivate: [SignUpGuard]
     }
     ]
   }
