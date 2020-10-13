@@ -3,7 +3,7 @@ import { BehaviorSubject } from 'rxjs'
 @Injectable({
   providedIn: 'root'
 })
-export class SharingService {
+export class SharingDataService {
 
   private pushingTrailerToStore = new BehaviorSubject('' as string);
   sharingTrailerFromShowingItemComponent = this.pushingTrailerToStore.asObservable();
@@ -16,6 +16,9 @@ export class SharingService {
    private pushingFilmDetailToStore = new BehaviorSubject({} as object);
    sharingFilmDetailFromBannerInDetailComponent = this.pushingFilmDetailToStore.asObservable();
   constructor() { }
+  sharingFilmListMethod(filmListFromShowtimeComponent: any) {
+    this.pushingFilmListToStore.next(filmListFromShowtimeComponent);
+  }
 
   sharingTrailerMethod(trailerFromShowingItemComponent: any) {
     this.pushingTrailerToStore.next(trailerFromShowingItemComponent);

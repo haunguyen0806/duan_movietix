@@ -5,17 +5,18 @@ import { PhimSapChieuComponent } from './phim-sap-chieu/phim-sap-chieu.component
 import { ItemPhimComponent } from './item-phim/item-phim.component';
 import { MoviesComponent } from './movies.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ItemPhimScComponent } from './item-phim-sc/item-phim-sc.component';
 
 
 
 @NgModule({
-  declarations: [PhimDangChieuComponent, PhimSapChieuComponent, ItemPhimComponent, MoviesComponent],
+  declarations: [PhimDangChieuComponent, PhimSapChieuComponent, ItemPhimComponent, MoviesComponent, ItemPhimScComponent],
   imports: [
     CommonModule,
-    SlickCarouselModule
+    SlickCarouselModule,
   ],
   exports: [
-    PhimDangChieuComponent, PhimSapChieuComponent, ItemPhimComponent,MoviesComponent
+    PhimDangChieuComponent, PhimSapChieuComponent, ItemPhimComponent,MoviesComponent,ItemPhimScComponent
   ]
 })
 export class MoviesModule { }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharingService } from '../../services/sharing.service';
+import { SharingDataService } from '../../share/sharing-data.service';
 
 @Component({
   selector: 'app-modal-trailer',
@@ -10,7 +10,7 @@ export class ModalTrailerComponent implements OnInit {
 
   trailerInModal: string = '';
 
-  constructor(private sharing: SharingService) { }
+  constructor(private sharing: SharingDataService) { }
 
   ngOnInit(): void {
     this.sharing.sharingTrailerFromShowingItemComponent.subscribe((data: any) => {

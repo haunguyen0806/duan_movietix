@@ -7,7 +7,7 @@ import { UngDungComponent } from './ung-dung/ung-dung.component'
 
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CumRapComponent } from './cum-rap/cum-rap.component';
-import { NewsModule } from './news/news.module'
+import { NewsModule } from './news/news.module';
 
 
 
@@ -18,10 +18,8 @@ import { NewsModule } from './news/news.module'
     SliderModule,
     MoviesModule,
     SlickCarouselModule,
-    NewsModule
-  ],
-  // exports: [
-  //   HomeLayoutComponent, UngDungComponent, CumRapComponent
-  // ]
+    NewsModule,
+    
+  ]
 })
 export class HomeLayoutModule { }

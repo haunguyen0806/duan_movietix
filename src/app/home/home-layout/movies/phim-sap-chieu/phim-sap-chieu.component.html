@@ -1,1 +1,15 @@
-<p>phim-sap-chieu works!</p>
+<div class="movie-info__list">
+    <ngx-slick-carousel class="carousel"
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let slide of DanhSachPhimSapChieu" class="slide">
+              <div class="row">
+                  <div class="movie-card col-3 my-3" *ngFor="let phim of DanhSachPhimSapChieu | slice: 0:8">
+                      <div class="img-card mb-3">
+                        <app-item-phim-sc [PhimSC]=phim></app-item-phim-sc>
+                      </div>
+                  </div>
+              </div>
+        </div>
+    </ngx-slick-carousel>
+</div>

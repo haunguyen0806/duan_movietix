@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SharingService } from '../../../../core/services/sharing.service'
+import { SharingDataService } from '../../../../core/share/sharing-data.service'
 @Component({
   selector: 'app-carousel-item',
   templateUrl: './carousel-item.component.html',
@@ -7,7 +7,7 @@ import { SharingService } from '../../../../core/services/sharing.service'
 })
 export class CarouselItemComponent implements OnInit {
   @Input() item;
-  constructor(private sharing: SharingService) { }
+  constructor(private sharing: SharingDataService) { }
 
   ngOnInit(): void {
   }

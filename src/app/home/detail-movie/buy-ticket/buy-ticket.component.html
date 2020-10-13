@@ -1,0 +1,35 @@
+<div class="background-buy-ticket">
+    <div class="buy-ticket-area">
+        <!-- Nav tab -->
+        <div class="tabs-area d-flex justify-content-between mx-auto">
+            <div class="tab-area" [ngClass]="{'active': isActivated === 'st'}" (click)="changeTab('st')">
+                Lịch chiếu
+            </div>
+            <div class="tab-area" [ngClass]="{'active': isActivated === 'if'}" (click)="changeTab('if')">
+                Thông tin
+            </div>
+            <div class="tab-area" [ngClass]="{'active': isActivated === 'rv'}" (click)="changeTab('rv')">
+                Đánh giá
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-sm-12 text-white">
+    
+                <!-- Tabs -->
+                <div [ngSwitch]="isChanged">
+                    <div *ngSwitchCase="'st'">
+                        <app-showtime-in-detail></app-showtime-in-detail>
+                    </div>
+                    <div *ngSwitchCase="'if'">
+                        <app-info></app-info>
+                    </div>
+                    <div *ngSwitchCase="'rv'">
+                        <app-review [revArr]="revArr"></app-review>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>

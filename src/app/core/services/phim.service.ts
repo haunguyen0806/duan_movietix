@@ -21,4 +21,9 @@ export class PhimService {
       })
     );
   }
+  layChiTietPhim(maPhim: string): Observable<any>{
+    const url = `QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`;
+
+    return this.api.get(url);
+  }
 }

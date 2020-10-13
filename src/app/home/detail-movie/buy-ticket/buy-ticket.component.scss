@@ -1,0 +1,32 @@
+.buy-ticket-area {
+    // padding-top: 100px ;
+  .tabs-area {
+      padding: 0 200px;
+      width: 70%;
+      .tab-area {
+        cursor: pointer;
+        color: gray;
+        transition: all 0.4s;
+        font-size: 20px;
+        position: relative;
+        margin-bottom: 20px;
+        &:before {
+          content: "";
+          border-radius: 30px;
+          width: 0;
+          height: 3px;
+        //   background-image: linear-gradient(to left, white, gray);
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          transition: all 0.4s;
+        }
+    }
+    .active {
+      color: #fb4226;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SliderComponent } from './slider.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselItemComponent } from './carousel-item/carousel-item.component'
-import { SharingModule } from '../../../core/sharing/sharing.module'
+import { SharingModule } from '../../../core/share/sharing.module'
 // import {SharingModule} from 'src/app/core/sharing/sharing.module'
 
 @NgModule({
