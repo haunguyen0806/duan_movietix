@@ -22,28 +22,18 @@ export class PhimService {
       })
     );
   }
-<<<<<<< HEAD
   layChiTietPhim(maPhim: string): Observable<any>{
-=======
-
+    const url = `QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`;
+    return this.api.get(url);
+  }
   layDanhSachPhimPhanTrang(
     soTrang = 1,
     soPhanTuTrenTrang = 5
   ): Observable<any> {
     return this.api.get(
-      `QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP03&soTrang=${soTrang}&soPhanTuTrenTrang=${soPhanTuTrenTrang}`
+      `QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP01&soTrang=${soTrang}&soPhanTuTrenTrang=${soPhanTuTrenTrang}`
     );
   }
-
-  layChiTietPhim(maPhim: string): Observable<any> {
->>>>>>> 0070081f17ae9968331698469921127c9fa17013
-    const url = `QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`;
-
-    return this.api.get(url);
-  }
-<<<<<<< HEAD
-=======
-
   themPhim(values: any): Observable<any> {
     const url = 'QuanLyPhim/ThemPhimUploadHinh';
     const obj = {
@@ -51,15 +41,12 @@ export class PhimService {
       maNhom: 'GP03',
     };
     const formData = new FormData();
-
     for (let key in obj) {
       formData.append(key, obj[key]);
     }
-
     return this.api.post(url, formData, {
       headers: { 'Content-Type': 'multipart/form-data' },
     });
   }
->>>>>>> 0070081f17ae9968331698469921127c9fa17013
 }
 3
