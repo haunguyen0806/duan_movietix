@@ -1,14 +1,14 @@
 .background-carousel {
-  box-shadow: 0 0 40px 5px gray;
-  border-radius: 0 0 20px 20px;
+  // box-shadow: 0 0 40px 5px gray;
+  // border-radius: 0 0 20px 20px;
   width: 100%;
   .carousel {
-    padding: 88px 1% 2%;
+    padding: 70px 0 0;
     width: 100%;
     position: relative;
-    .carousel-inner {
-      border-radius: 18px;
-    }
+    // .carousel-inner {
+    //   // border-radius: 18px;
+    // }
     .carousel-indicators {
       margin-bottom: 55px;
       li {
