@@ -9,7 +9,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CumRapComponent } from './cum-rap/cum-rap.component';
 import { NewsModule } from './news/news.module';
 
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [HomeLayoutComponent, UngDungComponent, CumRapComponent],
@@ -19,7 +19,7 @@ import { NewsModule } from './news/news.module';
     MoviesModule,
     SlickCarouselModule,
     NewsModule,
-    
+    NgxSpinnerModule,
   ]
 })
 export class HomeLayoutModule { }

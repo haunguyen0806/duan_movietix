@@ -18,10 +18,15 @@
             </li>
         </ul>
     </nav>
-    <div class="d-flex align-items-center">
-      <a href="#" class="signin"  routerLink="/signin">
-        <img class="img-signin mr-2" src="https://tix.vn/app/assets/img/avatar.png" width="30px" alt="">
-        <span >Đăng nhập</span>
-      </a>
-    </div>  
+    
+    <div class="d-flex align-items-center" *ngIf="curentUser; else dangnhap">
+
+        {{ curentUser.hoTen }}
+      </div>
+      <ng-template #dangnhap>
+        <a href="#" class="signin"  routerLink="/signin">
+            <img class="img-signin mr-2" src="https://tix.vn/app/assets/img/avatar.png" width="30px" alt="">
+            <span >Đăng nhập</span>
+          </a>
+      </ng-template>
 </header>

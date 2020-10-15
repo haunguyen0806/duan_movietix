@@ -1,9 +1,10 @@
 <div class="signin--vertical">
     <div class="container signin-modal">
         <div class="row">
-            <div class="mx-auto ">
+            <div class="mx-auto col-sm-10">
+                <img src="https://tix.vn/app/assets/img/icons/web-logo.png" alt="" routerLink="/" class="img">
                 <h2 class="text-center">Sign In</h2>
-                <form [formGroup]="signinForm" (ngSubmit)="dangNhap()">
+                <form [formGroup]="signinForm" (ngSubmit)="dangNhap()" >
                     <div class="form-group">
                         <label for="">Tài khoản</label>
                         <input type="text" name="taiKhoan" class="form-control" formControlName="taiKhoan" />
@@ -37,7 +38,7 @@
                   
                     <div class="py-3">
                         <button type="submit" class="btn btn-success mx-1">Đăng nhập</button>
-                        <p>Bạn chưa có tài khoản. <a routerLink="/signup"> Đăng ký ngay</a></p>
+                        <p>Bạn chưa có tài khoản ?. <a routerLink="/signup">=> Đăng ký ngay</a></p>
                         <!-- <div>
                             Hoặc bạn có thể đăng nhập với:
                             <button class="btn-social-icon mx-1" (click)="signInWithGoogle()">
@@ -49,6 +50,7 @@
                         </div> -->
                     </div>
                 </form>
+              
 
             </div>
         </div>

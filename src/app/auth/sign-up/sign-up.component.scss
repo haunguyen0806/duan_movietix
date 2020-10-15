@@ -6,7 +6,7 @@
     background-size: contain;
     background-position: center;
     .signup-modal{
-        width: 30%;
+        width: 25%;
         height: auto;
         position: absolute;
         top: 50%;
@@ -18,8 +18,9 @@
         color: #fff;
         border-radius: 6px;
     }
-    input{
-        margin: 0 auto;
-        width: 300px;
+    img{
+        width: 50px;
+        padding-top: 10px;
+        cursor: pointer;
     }
 }
