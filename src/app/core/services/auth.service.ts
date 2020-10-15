@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators'
 })
 export class AuthService {
   curenUserSubject = new BehaviorSubject<any | null>(null);
-  currenUser = this.curenUserSubject.asObservable();
+  currentUser = this.curenUserSubject.asObservable();
 
   constructor(private api: ApiService) { }
 

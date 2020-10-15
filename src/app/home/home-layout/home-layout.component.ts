@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {AfterViewInit, Component, Directive, QueryList, ViewChildren,OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home-layout',
