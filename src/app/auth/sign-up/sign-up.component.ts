@@ -46,7 +46,9 @@ export class SignUpComponent implements OnInit {
     this.auth.dangKy(this.signupForm.value).subscribe({
       next: res => console.log(res),
       error: err => console.log(err),
-      complete: () => console.log('Đăng ký thành công'),
-    });
+      complete: () => {
+        console.log('Đăng ký thành công');
+        this.router.navigate(['/signin']);
+    }});
   }
 }

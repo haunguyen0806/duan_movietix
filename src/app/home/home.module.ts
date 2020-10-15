@@ -12,6 +12,7 @@ import { DetailMovieModule } from './detail-movie/detail-movie.module';
 
 import { RouterModule, Routes } from '@angular/router';
 
+import {MaterialModule} from '../core/material/material.module'
 
  
 const routes: Routes = [
@@ -37,6 +38,8 @@ const routes: Routes = [
     RouterModule,
     DetailMovieModule ,
     HomeLayoutModule,
+    MaterialModule,
+    
   ]
 })
 export class HomeModule { }
