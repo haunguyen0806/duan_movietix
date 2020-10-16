@@ -7,7 +7,6 @@ import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http'
 import {AuthInterceptor} from './core/interceptor/auth.interceptor'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MaterialModule} from './core/material/material.module'
 
 @NgModule({
   declarations: [
@@ -18,7 +17,6 @@ import {MaterialModule} from './core/material/material.module'
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModule
   ],
   providers: [
     Title,

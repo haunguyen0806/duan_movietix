@@ -20,8 +20,12 @@
     </nav>
     
     <div class="d-flex align-items-center" *ngIf="curentUser; else dangnhap">
-
-        {{ curentUser.hoTen }}
+        <button mat-button [matMenuTriggerFor]="menu">{{ curentUser.hoTen }}</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Infomation</button>
+            <button mat-menu-item (click)="lognOutUser()">Logn out</button>
+          </mat-menu>
+        
       </div>
       <ng-template #dangnhap>
         <a href="#" class="signin"  routerLink="/signin">
