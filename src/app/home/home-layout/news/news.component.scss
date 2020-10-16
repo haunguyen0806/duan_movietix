@@ -1,15 +1,35 @@
 #tintuc {
-    .choose {
-        font-size: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .btn p {
-            font-size: 25px;
-            font-weight: 500;
-        }
+    .tabs-area {
+        padding-bottom: 20px;
+        width: 35%;
+        font-size: 25px;
+        cursor: pointer;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        
         .active{
-            color: #fa5238 ;
+            color: #fa5238;
+            font-size: 27px;
+            font-weight: 600;
+            &:before {
+            width: 100%;
+            }
+        }
+    }
+    .btnXemthem{
+        button{
+          background-color: white;
+          color: #949494;
+          border: solid 1px #000;
+          padding: 10px 35px;
+    
+          &:hover {
+            background-color: #fb4226;
+            color: white;
+            border: solid 1px #fb4226 ;
+            transition: 0.6s;
+          }
         }
     }
 }

@@ -6,13 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit {
-  loaiTinTuc: string = 'dienAnh';
+  // loaiTinTuc: string = 'dienAnh';
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  selection(value){
-    this.loaiTinTuc = value;
+  // selection(value){
+  //   this.loaiTinTuc = value;
+  // }
+  isChanged: string = 'dienAnh';
+  isActivated: string = 'dienAnh';
+  
+  changeTab(tabId){
+    this.isChanged = tabId;
+    this.isActivated = tabId;
+    // window.scrollTo({
+    //   top: 450,
+    //   behavior: 'smooth'
+    // })
   }
 }
