@@ -18,9 +18,13 @@
             </li>
         </ul>
     </nav>
-    
-    <div class="d-flex align-items-center" *ngIf="curentUser; else dangnhap">
-        <button mat-button [matMenuTriggerFor]="menu">{{ curentUser.hoTen }}</button>
+    <mat-icon svgIcon="thumbs-up" ></mat-icon>
+
+    <div class="d-flex align-items-center" *ngIf="curentUser; else dangnhap">    
+        <button mat-button [matMenuTriggerFor]="menu">
+            <img src="../../../assets/img/iconUser.jpg" alt="" class="img-fluid">    
+            {{ curentUser.hoTen }}
+        </button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item>Infomation</button>
             <button mat-menu-item (click)="lognOutUser()">Logn out</button>

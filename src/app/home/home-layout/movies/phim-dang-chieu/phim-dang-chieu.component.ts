@@ -10,12 +10,8 @@ import { PhimService } from '../../../../core/services/phim.service'
 })
 export class PhimDangChieuComponent implements OnInit {
   danhSachPhim: Movie[];
-  // danhSachPhim = [];
-  loading: boolean = false;
+  loading: boolean = true;
   error: boolean = false;
-  slides = [
-
-  ]
   slideConfig = {dots: false};
   // moviesPerSlide = 8;
 

@@ -15,6 +15,7 @@
       <th>Mô tả</th>
       <th>Hình ảnh</th>
       <th>Ngày khởi chiếu</th>
+      <th>Xoá phim</th>
     </tr>
   </thead>
   <tbody>
@@ -22,8 +23,11 @@
       <td>{{ phim.maPhim }}</td>
       <td>{{ phim.tenPhim }}</td>
       <td>{{ phim.moTa }}</td>
-      <td><img [src]="phim.hinhAnh" alt="" class="img-fluid "></td>
+      <td><img [src]="phim.hinhAnh" alt="" class="imgAdd"></td>
       <td>{{ phim.ngayKhoiChieu | date: "dd/MM/yyyy" }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="handleDelete()">Delete</button>
+      </td>
     </tr>
   </tbody>
 </table>
