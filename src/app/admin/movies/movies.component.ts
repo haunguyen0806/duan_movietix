@@ -44,5 +44,14 @@ export class MoviesComponent implements OnInit {
         },
       });
   }
+  handleDelete(va){
+    console.log(va)
+  // this.phimService.xoaPhim(va)
+  // .subscribe({
+  //   next: (result)=>{
+      
+  //   }
+  // })
+}
 
 }

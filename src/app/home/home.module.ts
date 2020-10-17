@@ -13,6 +13,7 @@ import { DetailMovieModule } from './detail-movie/detail-movie.module';
 import { RouterModule, Routes } from '@angular/router';
 
 import {MaterialModule} from '../core/material/material.module'
+import { NgxSpinnerModule } from "ngx-spinner";
 
  
 const routes: Routes = [
@@ -39,7 +40,7 @@ const routes: Routes = [
     DetailMovieModule ,
     HomeLayoutModule,
     MaterialModule,
-    
+    NgxSpinnerModule
   ]
 })
 export class HomeModule { }

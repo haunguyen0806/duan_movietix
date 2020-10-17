@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
-
+import {PhimService} from '../core/services/phim.service'
 
 @Component({
   selector: 'app-home',
@@ -8,15 +8,28 @@ import { NgxSpinnerService } from "ngx-spinner";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
-  constructor(private spinner: NgxSpinnerService) { }
+  loading: boolean=true;
+  constructor(private spinner: NgxSpinnerService,private PhimService:PhimService ){ }
 
   ngOnInit(): void {
-    this.spinner.show();
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 5000);
+this.loading=true;
+this.spinner.show();
+setTimeout(() => {
+  this.spinner.hide();
+}, 3000);
+    this.PhimService.layDanhSachPhim().subscribe({
+      next: (result) => {
+        // this.danhSachPhim = result;
+        this.loading = false;
+
+      },
+      error: (err) => {
+        console.log(err);
+        // this.error = true;
+        // this.loading = false;
+      },
+    });
+   
   }
 
   
