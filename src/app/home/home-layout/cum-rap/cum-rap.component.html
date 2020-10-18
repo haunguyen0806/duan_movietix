@@ -2,26 +2,12 @@
     <div class="container">
       <div class="row">
         <!-- NAV THEATER LOGO -->
-        <div class="nav nav-tabs flex-column theater__logos">
-            <a class="nav-item nav-link active" data-toggle="tab" href="#bhd">
-                <img class="theater__image" src="https://s3img.vcdn.vn/123phim/2018/09/f32670fd0eb083c9c4c804f0f3a252ed.png" alt="" />
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#cne">
-                <img class="theater__image" src="https://s3img.vcdn.vn/123phim/2018/09/1721cfa98768f300c03792e25ceb0191.png" alt="" />
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#galaxy">
-                <img class="theater__image" src="https://images.glints.com/unsafe/1200x0/glints-dashboard.s3.amazonaws.com/company-logo/c366498992d989524d4a69c495a6189e.png" alt="" />
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#cgv">
-                <img class="theater__image" src="https://www.ncb-bank.vn/promotion/201703/cgv.jpg" alt="" />
-            </a>
-            <a class="nav-item nav-link " data-toggle="tab" href="#lottecne">
-                <img class="theater__image" src="https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png" alt="" />
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#megaGS">
-                <img class="theater__image" src="https://s3img.vcdn.vn/123phim/2018/09/7b078639bd8fdb09dd83652d207c7b90.png" alt="" />
-            </a>
+        <div class="col-sm-1">
+          <div class="nav nav-tabs flex-column theater__logos abc" *ngFor=" let rap of danhSachRap">     
+              <img [src]="rap.logo" alt="" class="img-fluid py-1">  
         </div>
+        </div>
+       
         <!-- NAV THEATER DETAILS -->
         <div class="tab-content theater__details">
           <div class="tab-pane fade show active" id="bhd">

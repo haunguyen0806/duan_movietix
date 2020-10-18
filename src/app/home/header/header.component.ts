@@ -12,10 +12,8 @@ import {MatIconRegistry} from '@angular/material/icon';
 export class HeaderComponent implements OnInit {
   curentUser: any = {};
 
-  constructor(private auth: AuthService, private router: Router,iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'thumbs-up',
-      sanitizer.bypassSecurityTrustResourceUrl('../../../assets/img/iconUser.jpg'));
+  constructor(private auth: AuthService, private router: Router) {
+
   }
 
 

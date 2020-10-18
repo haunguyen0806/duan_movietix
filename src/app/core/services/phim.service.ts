@@ -49,7 +49,7 @@ export class PhimService {
   }
   xoaPhim(maPhim: string): Observable<any> {
     const url = `QuanLyPhim/XoaPhim?MaPhim=${maPhim}`;
-    https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=1961
+    // https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=1961
     return this.api.delete(url);
   }
 }
