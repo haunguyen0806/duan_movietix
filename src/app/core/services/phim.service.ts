@@ -30,7 +30,7 @@ export class PhimService {
     soPhanTuTrenTrang = 5
   ): Observable<any> {
     return this.api.get(
-      `QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP03&soTrang=${soTrang}&soPhanTuTrenTrang=${soPhanTuTrenTrang}`
+      `QuanLyPhim/LayDanhSachPhimPhanTrang?maNhom=GP01&soTrang=${soTrang}&soPhanTuTrenTrang=${soPhanTuTrenTrang}`
     );
   }
   themPhim(values: any): Observable<any> {
@@ -48,7 +48,8 @@ export class PhimService {
     });
   }
   xoaPhim(maPhim: string): Observable<any> {
-    const url = `https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=${maPhim}`;
+    const url = `QuanLyPhim/XoaPhim?MaPhim=${maPhim}`;
+    https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/XoaPhim?MaPhim=1961
     return this.api.delete(url);
   }
 }
