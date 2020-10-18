@@ -24,10 +24,6 @@ export class PhimDangChieuComponent implements OnInit {
       next: (listPhim) => {
         this.loading = false;
         this.danhSachPhim = listPhim ;
-        // for(let i=0; i < listPhim.length; i += this.moviesPerSlide){
-        //   this.danhSachPhim.push(listPhim.slice(i, i + this.moviesPerSlide));
-        // }
-
       },
       error: (err) => {
         console.log(err);
